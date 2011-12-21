@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <title>40 cities boxes</title>
+        <link rel="stylesheet" href="http://openlayers.org/dev/theme/default/style.css" type="text/css">
+        <link rel="stylesheet" href="lib/style.css" type="text/css">             
+          
+        <!-- ########################## LIBRARIES ########################## -->
+    	<!-- jQuery  -->
+	    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    	<!-- Raphael  -->
+		<script type="text/javascript" src="lib/raphael-min.js"></script>
+    	<!-- highcharts  -->
+		<script type="text/javascript" src="lib/highcharts.js"></script>
+	    <!-- Open layers  -->
+    	<script type="text/javascript" src="lib/OpenLayers-2.11/OpenLayers.js"></script>	    
+		<!-- google  -->
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<!-- proj4  -->
+		<script type="text/javascript" src="lib/proj4js-combined.js"></script>
+		<!-- Animation of divs -->
+		<script type="text/javascript" src="lib/animatedcollapse.js"></script>                
+        
+        <!-- ########################## OWN SCRIPTS ########################## --
+        <!-- Make map controls  -->	
+		<script type="text/javascript" src="js/mapControls.js"></script>
+		<!-- Make raphael interface  -->
+		<script type="text/javascript" src="js/makeInterface.js"></script>
+		<!-- Make hide/show divs interface  -->
+		<script type="text/javascript" src="js/hideShow.js"></script>	
+		<!-- Prepare server querries  -->
+		<script type="text/javascript" src="js/spatialQuerry.js"></script>	
+		<!-- Create charts  -->
+		<script type="text/javascript" src="js/makeCharts.js"></script>  
+		
+	
+		<!-- ########################## 40 Cities SCRIPTS ########################## -->
+		<!-- Create boxes outlinining city  -->
+		<script type="text/javascript" src="js/cities_v2.js"></script>		
+	
+  </head>
+  
+  <body onload="init();">
+  	
+  <!-- Map canvas-->
+    <div id="basicMap" style = "position:absolute; top:0; left:0; width: 100%; height: 100%;"></div>
+
+	<!-- Sidebar controls -->
+	<div id="sidebar" style="position: absolute;top:0; left:0; width:200px; height:100%;">
+	</div>
+	
+	<!-- Output div -->
+	<div id="charts" style="position: absolute; bottom:5%; right:3%; width:300px; height:200px;">
+	</div>
+
+	<!-- Hide charts button -->
+	<div id="hideCharts" style="position: absolute; bottom:5%; right:3%; width:20px; height:20px;">
+	</div>
+
+	<!-- Hide sidebar button -->
+	<div id="hideSidebar" style = "position:absolute; left:0; bottom:0px; height:20px; width:20px">
+	</div> 
+	
+	  <!-- Pan control -->
+    <div id="controls" style="position: absolute; top:30px; left:30px; width:120px; height:20px;"></div>
+   
+	
+  </body>
+
+</html>
