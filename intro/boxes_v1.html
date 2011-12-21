@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <title>OpenLayers Boxes Example</title>
+      
+        <title>OpenLayers Boxes</title>
+        
         <link rel="stylesheet" href="http://openlayers.org/dev/theme/default/style.css" type="text/css">
-        <link rel="stylesheet" href="style.css" type="text/css">
-             
+        <link rel="stylesheet" href="style.css" type="text/css">           
               
         <!-- google  -->
 		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
         <!-- proj4  -->
 		<script type="text/javascript" src="lib/proj4js-combined.js"></script>        
+        <!-- openlayers  -->
+         <script src="http://www.openlayers.org/api/2.10/OpenLayers.js"></script>
+        <!-- proj4  -->
+        <script src="http://spitsuur.googlecode.com/svn-history/r93/trunk/portal/js/proj4js/lib/proj4js-compressed.js"></script>
+        <!-- geoExt  -->
+        <!-- <script type="text/javascript" src="http://api.geoext.org/1.0/script/GeoExt.js"></script> -->
         
-        <script src="http://openlayers.org/dev/OpenLayers.js"></script>
         <script type="text/javascript">
         
-        	//Define Projections
-	Proj4js.defs["EPSG:27700"]  = "+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +datum=OSGB36 +units=m +no_defs";
-	Proj4js.defs["EPSG:4326"]   = "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs";
-	Proj4js.defs["EPSG:900913"] = "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs";
-
-      
-        
-
-        
+		//Define Projections
+		Proj4js.defs["EPSG:27700"]  = "+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +datum=OSGB36 +units=m +no_defs";
+		Proj4js.defs["EPSG:4326"]   = "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs";
+		Proj4js.defs["EPSG:900913"] = "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs";     
+       
         
         
     var city_extents = [
